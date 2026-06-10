@@ -2,11 +2,16 @@ package com.example.exampracticum
 
 
 import android.os.Bundle
+import android.content.Intent
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import android.widget.TextView
+import androidx.core.view.WindowInsetsCompat
+
+class SplashActivity: AppCompatActivity {
+
 //Declarations
     private lateinit var tvTitle: TextView
     private lateinit var SubTitle: TextView
