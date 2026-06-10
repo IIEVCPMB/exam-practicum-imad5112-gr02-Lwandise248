@@ -24,3 +24,13 @@ class Display : AppCompatActivity {
             val quantities = arrayOf(1,3,2)
             val comments = arrayOf("")
 
+            var totalPacked = 0
+            for (qty in quantities){
+                totalPacked += qty
+            }
+
+            //Loop through arrays and Display each of them
+            for (i in itemName.indices){
+            val itemView = TextView(this)
+            itemView.text =""
+            }
