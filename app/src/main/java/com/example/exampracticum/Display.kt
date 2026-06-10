@@ -15,3 +15,6 @@ class Display : AppCompatActivity {
         tvTitle = findViewById(R.id.tvTitle)
 
     }}
+        //Btn setOnClickListener
+        btnBack.setOnClickListener {
+            val intent = Intent(this, SplashActivity::class.java)
