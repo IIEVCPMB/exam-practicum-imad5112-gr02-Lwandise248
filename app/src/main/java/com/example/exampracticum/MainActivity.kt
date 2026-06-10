@@ -1,6 +1,11 @@
 package com.example.exampracticum
 
 import android.os.Bundle
+import android.content.Intent
+import android.widget.Button
+import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,7 +16,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvTitle: TextView
     private lateinit var btnContinue: Button
     private lateinit var btnAdd: Button
-    
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         btnAdd = findViewById(R.id.btnAdd)
         btnContinue = findViewById(R.id.btnContinue)
 
-        
         //Btn SetOnClick Listeners
         btnAdd.setOnClickListener {
             val builder = AlertDialog.Builder(this)
@@ -37,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
             btnContinue.setOnClickListener {
                 val intent = Intent(this, Display::class.java)
-                intent.putStringArrayListExtra("CampsiteCommander", Display)
+                intent.putStringArrayListExtra("packingList", packingList)
                 startActivity(intent)
         }
 
