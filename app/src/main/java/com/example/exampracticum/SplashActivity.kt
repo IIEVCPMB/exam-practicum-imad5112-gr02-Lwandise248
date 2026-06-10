@@ -13,5 +13,15 @@ import android.widget.TextView
     private lateinit var btnStart: Button
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_splash)
+        //Typecasting
+
+        tvTitle = findViewById(R.id.tvTitle)
+        SubTitle = findViewById(R.id.SubTitle)
+        btnStart =findViewById(R.id.btnStart)
+
 
 }}
