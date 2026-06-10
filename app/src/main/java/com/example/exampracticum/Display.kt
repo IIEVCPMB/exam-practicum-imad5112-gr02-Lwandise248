@@ -18,3 +18,9 @@ class Display : AppCompatActivity {
         //Btn setOnClickListener
         btnBack.setOnClickListener {
             val intent = Intent(this, SplashActivity::class.java)
+            //Parallel arrays
+            val itemName = arrayOf("Tent,Meat,Sleeping bags")
+            val Description = arrayOf("Shelter,food,warmth")
+            val quantities = arrayOf(1,3,2)
+            val comments = arrayOf("")
+
