@@ -23,6 +23,23 @@ class MainActivity : AppCompatActivity() {
         btnContinue = findViewById(R.id.btnContinue)
 
         
+        //Btn SetOnClick Listeners
+        btnAdd.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Add to Packing List")
+
+            val input = EditText(this)
+            input.hint = "Enter item name"
+            builder.setView(input)
+
+
+            builder.show()
+
+            btnContinue.setOnClickListener {
+                val intent = Intent(this, Display::class.java)
+                intent.putStringArrayListExtra("CampsiteCommander", Display)
+                startActivity(intent)
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
