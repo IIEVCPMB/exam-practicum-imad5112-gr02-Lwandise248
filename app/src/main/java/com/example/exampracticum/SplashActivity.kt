@@ -23,5 +23,14 @@ import android.widget.TextView
         SubTitle = findViewById(R.id.SubTitle)
         btnStart =findViewById(R.id.btnStart)
 
+        //btnSetOnClickListeners
+        btnStart.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+                insets
 
 }}
